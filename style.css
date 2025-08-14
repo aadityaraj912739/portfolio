@@ -1,0 +1,138 @@
+/* ===== Global Styles ===== */
+body {
+  background-color: #1a1a1a; /* Dark background */
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #f89f2d; /* LeetCode orange */
+  margin-bottom: 10px;
+}
+
+a {
+  color: #f89f2d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header Section ===== */
+header {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #f89f2d;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f89f2d;
+  color: #1a1a1a;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #ffa733;
+}
+
+/* ===== Projects Section ===== */
+.project {
+  background: #2d2d2d; /* Card background */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+.project p {
+  color: #cccccc;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #f89f2d;
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.project a:hover {
+  background-color: #ffa733;
+}
+
+/* ===== Skills Section ===== */
+.skills {
+  background: #2d2d2d;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+  color: #ccc;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  margin-top: 20px;
+  color: #888;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.social-icons img {
+  filter: brightness(0) invert(1); /* icons ko white banata hai */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(0.8) invert(1);
+}

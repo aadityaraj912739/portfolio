@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aaditya Raj – Portfolio</title>
+  <meta name="description" content="Portfolio of Aaditya Raj – projects, skills, and contact information." />
+  <style>
+    :root{
+      --bg:#0b0f17; /* deep navy */
+      --card:#111827; /* slightly lighter */
+      --text:#e5e7eb; /* gray-100 */
+      --muted:#9ca3af; /* gray-400 */
+      --brand:#60a5fa; /* sky-400 */
+      --accent:#34d399; /* emerald-400 */
+      --ring: rgba(96,165,250,.35);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.12), transparent),
+                               radial-gradient(1000px 500px at -10% 10%, rgba(52,211,153,.10), transparent), var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(11,15,23,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--accent)); box-shadow:0 0 12px rgba(96,165,250,.8)}
+    nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+    nav a{padding:8px 12px; border-radius:999px}
+    nav a:hover{background:rgba(255,255,255,.06)}
+
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:60px 0 28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .card.pad{padding:28px}
+    h1{font-size:42px; line-height:1.2; margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .row{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-block; padding:10px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); text-decoration:none; transition:transform .08s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(135deg, var(--brand), var(--accent)); color:#07121f; font-weight:700}
+
+    section{padding:40px 0}
+    section h2{font-size:28px; margin:6px 0 18px}
+
+    .grid{display:grid; gap:16px}
+    .grid.cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
+    .grid.cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}
+
+    .skill{padding:14px 16px; border-radius:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08)}
+    .tag{display:inline-block; font-size:12px; padding:4px 8px; border:1px solid rgba(255,255,255,.12); border-radius:999px; margin-right:6px; margin-bottom:6px; color:var(--muted)}
+
+    .project{display:flex; flex-direction:column; gap:10px; padding:16px; border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08)}
+    .project h3{margin:0}
+    .project .links{display:flex; gap:12px}
+
+    .about{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+
+    .contact form{display:grid; gap:12px}
+    input, textarea{padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(17,24,39,.6); color:var(--text); outline:none}
+    input:focus, textarea:focus{box-shadow:0 0 0 4px var(--ring)}
+
+    footer{padding:28px 0 50px; color:var(--muted)}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot" aria-hidden="true"></span> Aaditya Raj</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div class="card pad">
+        Hi, I'm Aaditya Raj—<br/>an aspiring Full Stack Developer.
+<p>
+A Computer Science Engineering student skilled in MERN Stack, AWS, and AI solutions. I love building scalable web applications and AI-powered tools that solve real problems.
+</p>
+
+        <div class="row" style="margin-top:12px">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn" href="files/Aaditya-Raj-Resume.pdf" download>Download Résumé</a>
+        </div>
+      </div>
+      <aside class="card pad" aria-label="Quick facts">
+  <h3 style="margin-top:0">Quick Facts</h3>
+
+  <p class="muted" style="margin:0 0 6px">Currently working on:</p>
+  <div>
+    <span class="tag">Full Stack (MERN)</span>
+    <span class="tag">AI-powered Apps</span>
+    <span class="tag">DSA Challenges</span>
+  </div>
+
+  <p class="muted" style="margin:14px 0 6px">LeetCode / DSA Progress:</p>
+  <div>
+    <a class="tag" href="https://leetcode.com/u/ar912739/" target="_blank">LeetCode Profile</a>
+    <span class="tag">100+ Problems Solved</span>
+    <span class="tag">Daily Coding Practice</span>
+  </div>
+
+  <p class="muted" style="margin:14px 0 6px">Open to:</p>
+  <div>
+    <span class="tag">Internships</span>
+    <span class="tag">Freelance</span>
+    <span class="tag">Collabs</span>
+  </div>
+</aside>
+
+    </section>
+
+    <section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Online Subjective Quiz Website</h3>
+    <p>Full-stack quiz platform with authentication, real-time scoring, and admin dashboard.</p>
+    <a href="projects/quiz-website/index.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>VedaAI – Ayurvedic Health Assistant</h3>
+    <p>AI-powered Ayurvedic chatbot using MERN stack and Google Gemini AI.</p>
+    <a href="projects/vedaai/index.html" target="_blank">View Project</a>
+  </div>
+
+</section>
+
+
+    <section id="skills">
+      <h2>Skills</h2>
+<ul>
+  <li>Java (OOPs, DSA), JavaScript</li>
+  <li>HTML, CSS, Tailwind CSS, React.js</li>
+  <li>Node.js, Express.js</li>
+  <li>MySQL, MongoDB</li>
+  <li>AWS (EC2, S3), GitHub Pages</li>
+  <li>Git, Postman, MySQL Workbench</li>
+</ul>
+
+    </section>
+
+    <section id="about" class="about">
+      <div class="card pad">
+        <h2>About Me</h2>
+        <p class="muted">I'm Aaditya, a beginner who enjoys building small, useful projects and sharing what I learn. My goal this year is to become solid at HTML/CSS and comfortable with JavaScript so I can create real-world apps.</p>
+        <p class="muted">When I'm not coding, I like reading about startups and exploring new tools. I'm actively looking for beginner-friendly opportunities where I can learn fast and contribute.</p>
+      </div>
+      <div class="card pad">
+        <h3 style="margin-top:0">Highlights</h3>
+        <ul>
+          <li>✅ Built 2 mini projects to practice fundamentals</li>
+          <li>✅ Comfortable with Git & GitHub basics</li>
+          
+        </ul>
+        <div style="margin-top:10px">
+          <a class="btn" href="files/Aaditya-Raj-Resume.pdf" download>Download Résumé</a>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p class="muted">Want to collaborate or say hi? Send a message. (This form is a demo—connect it later with Formspree or Netlify Forms.)</p>
+      <form onsubmit="handleSubmit(event)" aria-label="Contact form">
+        <div class="grid cols-2">
+          <label>
+            <span class="muted">Your Name</span>
+            <input required type="text" placeholder="Your name" />
+          </label>
+          <label>
+            <span class="muted">Email</span>
+            <input required type="email" placeholder="you@example.com" />
+          </label>
+        </div>
+        <label>
+          <span class="muted">Message</span>
+          <textarea required rows="5" placeholder="Write your message..."></textarea>
+        </label>
+        <div class="row">
+          <button class="btn primary" type="submit">Send Message</button>
+          <a class="btn" href="mailto:youremail@example.com">Email Directly</a>
+        </div>
+      </form>
+    </section>
+
+    <footer class="container">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <small>© <span id="year"></span> Aaditya Raj. All rights reserved.</small>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // fake contact form handler
+    function handleSubmit(e){
+      e.preventDefault();
+      alert("Thanks! This demo form isn't connected yet. You can integrate Formspree or Netlify Forms later.");
+    }
+  </script>
+  <footer>
+  <p>&copy; 2025 Aaditya Raj</p>
+  <div class="social-icons">
+    <a href="https://github.com/aadityaraj912739" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24">
+    </a>
+    <a href="https://www.linkedin.com/in/aaditya-raj-897aa5327" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="24">
+    </a>
+    <a href="https://leetcode.com/u/ar912739/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="24">
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
