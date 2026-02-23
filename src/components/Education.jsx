@@ -28,31 +28,49 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          Education
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Education
+            </span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Academic background and qualifications
+          </p>
+        </div>
         <div className="max-w-4xl mx-auto space-y-6">
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg shadow-lg"
+              className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-1"
             >
-              <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
-                <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <div className="flex justify-between items-start flex-wrap gap-4 mb-3">
+                <h3 className="text-2xl font-bold text-gray-900">{edu.degree}</h3>
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-md">
                   {edu.duration}
                 </span>
               </div>
-              <p className="text-lg text-blue-600 font-medium mb-2">
+              <p className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
                 {edu.institution}
               </p>
-              <p className="text-gray-700 font-semibold mb-3">{edu.grade}</p>
+              <div className="inline-block bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-lg mb-4">
+                <p className="text-gray-800 font-bold">{edu.grade}</p>
+              </div>
               {edu.highlights.length > 0 && (
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <ul className="space-y-3 mt-4">
                   {edu.highlights.map((highlight, highlightIndex) => (
-                    <li key={highlightIndex}>{highlight}</li>
+                    <li key={highlightIndex} className="flex items-start gap-3 bg-gradient-to-r from-blue-50 to-purple-50 p-3 rounded-lg">
+                      <div className="shrink-0 mt-0.5">
+                        <div className="w-5 h-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                      </div>
+                      <span className="text-gray-700 leading-relaxed">{highlight}</span>
+                    </li>
                   ))}
                 </ul>
               )}

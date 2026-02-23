@@ -1,17 +1,24 @@
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gradient-to-br from-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          Experience
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Experience
+            </span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Professional journey and hands-on development experience
+          </p>
+        </div>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <div className="flex items-start">
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-1">
+            <div className="flex items-start gap-6">
               <div className="shrink-0">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
                   <svg
-                    className="w-6 h-6 text-white"
+                    className="w-8 h-8 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -25,68 +32,56 @@ const Experience = () => {
                   </svg>
                 </div>
               </div>
-              <div className="ml-6 flex-1">
-                <div className="flex justify-between items-start">
+              <div className="flex-1">
+                <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       Full Stack Developer Intern
                     </h3>
-                    <p className="text-lg text-blue-600 font-medium">
+                    <p className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                       Genex CADD Centre, BBIT Campus
                     </p>
                   </div>
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-4 py-2 rounded-lg text-sm font-semibold shadow-md">
                     June 2025 – July 2025
                   </span>
                 </div>
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-start">
-                    <svg
-                      className="w-5 h-5 text-blue-600 mt-1 shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <p className="ml-3 text-gray-700">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3 bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg hover:shadow-md transition-all duration-200">
+                    <div className="shrink-0 mt-0.5">
+                      <div className="w-6 h-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
                       Developed VedaAI, an AI-powered Ayurvedic health assistant using MERN stack 
                       and Google Gemini AI API integration
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <svg
-                      className="w-5 h-5 text-blue-600 mt-1 shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <p className="ml-3 text-gray-700">
+                  <div className="flex items-start gap-3 bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg hover:shadow-md transition-all duration-200">
+                    <div className="shrink-0 mt-0.5">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
                       Created RESTful APIs and integrated MongoDB for dynamic data storage, 
                       implementing efficient CRUD operations
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <svg
-                      className="w-5 h-5 text-blue-600 mt-1 shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <p className="ml-3 text-gray-700">
+                  <div className="flex items-start gap-3 bg-gradient-to-r from-pink-50 to-red-50 p-4 rounded-lg hover:shadow-md transition-all duration-200">
+                    <div className="shrink-0 mt-0.5">
+                      <div className="w-6 h-6 bg-gradient-to-r from-pink-600 to-red-600 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
                       Collaborated in an Agile team environment to deliver production-ready 
                       features within tight deadlines
                     </p>

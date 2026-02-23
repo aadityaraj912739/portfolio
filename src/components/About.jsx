@@ -1,44 +1,68 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-br from-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          About Me
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Passionate full-stack developer crafting innovative solutions
+          </p>
+        </div>
         <div className="max-w-3xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg shadow-lg">
-            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-              I am a Computer Science Engineering student with hands-on experience in full-stack 
-              development using the MERN stack. My journey in software development has been driven 
-              by a passion for creating efficient and user-centric applications.
-            </p>
-            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-              I specialize in building responsive web applications with strong expertise in both 
-              frontend and backend technologies. My experience includes deploying production-ready 
-              applications, integrating AI APIs, and working in Agile team environments.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              I'm constantly learning and exploring new technologies to stay ahead in the 
-              ever-evolving world of web development. When I'm not coding, I enjoy contributing 
-              to open-source projects and building solutions that make a difference.
-            </p>
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-1">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-1">
+                  <div className="w-3 h-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  I am a Computer Science Engineering student with hands-on experience in full-stack 
+                  development using the MERN stack. My journey in software development has been driven 
+                  by a passion for creating efficient and user-centric applications.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-1">
+                  <div className="w-3 h-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  I specialize in building responsive web applications with strong expertise in both 
+                  frontend and backend technologies. My experience includes deploying production-ready 
+                  applications, integrating AI APIs, and working in Agile team environments.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-1">
+                  <div className="w-3 h-3 bg-gradient-to-r from-pink-600 to-red-600 rounded-full"></div>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  I'm constantly learning and exploring new technologies to stay ahead in the 
+                  ever-evolving world of web development. When I'm not coding, I enjoy contributing 
+                  to open-source projects and building solutions that make a difference.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">2+</div>
-              <div className="text-gray-700">Years Coding</div>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">2+</div>
+              <div className="text-gray-600 font-medium">Years Coding</div>
             </div>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
-              <div className="text-gray-700">Projects</div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">5+</div>
+              <div className="text-gray-600 font-medium">Projects</div>
             </div>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-              <div className="text-gray-700">Technologies</div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-2">10+</div>
+              <div className="text-gray-600 font-medium">Technologies</div>
             </div>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">1</div>
-              <div className="text-gray-700">Internship</div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">1</div>
+              <div className="text-gray-600 font-medium">Internship</div>
             </div>
           </div>
         </div>
