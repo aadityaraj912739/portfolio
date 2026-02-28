@@ -1,35 +1,35 @@
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">
             Hi, I'm <span className="text-blue-600">Aaditya Raj</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-700 mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-700 mb-4 sm:mb-6">
             Full Stack Developer
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
             Computer Science Engineering student passionate about building efficient, 
             user-centric software solutions using the MERN stack.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 px-4">
             <a
               href="#contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors w-full sm:w-auto text-center"
             >
               Get In Touch
             </a>
             <a
               href="#projects"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-lg font-medium border-2 border-blue-600 hover:bg-blue-50 transition-colors w-full sm:w-auto text-center"
             >
               View Projects
             </a>
             <a
               href="/Aaditya_Raj_Resume.pdf"
               download="Aaditya_Raj_Resume.pdf"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-all flex items-center gap-2"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 sm:px-8 py-3 rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -37,7 +37,7 @@ const Hero = () => {
               Download Resume
             </a>
           </div>
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-4 sm:gap-6 px-4">
             <a
               href="https://github.com/aadityaraj912739"
               target="_blank"

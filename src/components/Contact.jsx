@@ -28,29 +28,29 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-white to-blue-50">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Get In Touch
             </span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-2">
             Have a question or want to work together? Feel free to reach out!
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Contact Information */}
-            <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Contact Information
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-blue-600 mt-1 shrink-0"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mt-1 shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -62,11 +62,11 @@ const Contact = () => {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">Email</p>
+                  <div className="ml-3 sm:ml-4">
+                    <p className="font-semibold text-gray-900 text-sm sm:text-base">Email</p>
                     <a
                       href="mailto:ar912739@gmail.com"
-                      className="text-blue-600 hover:underline"
+                      className="text-blue-600 hover:underline text-sm sm:text-base break-all"
                     >
                       ar912739@gmail.com
                     </a>
@@ -74,7 +74,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-blue-600 mt-1 shrink-0"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mt-1 shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -86,11 +86,11 @@ const Contact = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">Phone</p>
+                  <div className="ml-3 sm:ml-4">
+                    <p className="font-semibold text-gray-900 text-sm sm:text-base">Phone</p>
                     <a
                       href="tel:+916200425862"
-                      className="text-blue-600 hover:underline"
+                      className="text-blue-600 hover:underline text-sm sm:text-base"
                     >
                       +91-6200425862
                     </a>
@@ -98,7 +98,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-start">
                   <svg
-                    className="w-6 h-6 text-blue-600 mt-1 shrink-0"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mt-1 shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -116,15 +116,15 @@ const Contact = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">Location</p>
-                    <p className="text-gray-600">Kolkata, India</p>
+                  <div className="ml-3 sm:ml-4">
+                    <p className="font-semibold text-gray-900 text-sm sm:text-base">Location</p>
+                    <p className="text-gray-600 text-sm sm:text-base">Kolkata, India</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-8">
-                <p className="font-semibold text-gray-900 mb-4">Follow Me</p>
-                <div className="flex gap-4">
+              <div className="mt-6 sm:mt-8">
+                <p className="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Follow Me</p>
+                <div className="flex gap-3 sm:gap-4">
                   <a
                     href="https://github.com/aadityaraj912739"
                     target="_blank"
@@ -164,16 +164,16 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Send a Message
               </h3>
               {submitted ? (
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 text-green-800 px-4 py-3 rounded-lg font-medium shadow-md">
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 text-green-800 px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium shadow-md text-sm sm:text-base">
                   Thank you for your message! I'll get back to you soon.
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                   <div>
                     <label
                       htmlFor="name"

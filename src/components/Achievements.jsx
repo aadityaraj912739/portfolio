@@ -71,32 +71,32 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="achievements" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Achievements
             </span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-2">
             Milestones and accomplishments that demonstrate my skills and dedication
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="bg-white p-5 sm:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
-              <div className={`inline-flex p-4 rounded-lg bg-gradient-to-r ${achievement.color} text-white mb-4`}>
+              <div className={`inline-flex p-3 sm:p-4 rounded-lg bg-gradient-to-r ${achievement.color} text-white mb-3 sm:mb-4`}>
                 {achievement.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                 {achievement.title}
               </h3>
-              <p className="text-lg font-semibold text-blue-600 mb-3">
+              <p className="text-base sm:text-lg font-semibold text-blue-600 mb-2 sm:mb-3">
                 {achievement.description}
               </p>
               <p className="text-gray-600 leading-relaxed">

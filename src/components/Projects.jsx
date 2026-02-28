@@ -95,21 +95,28 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          Projects
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h2>
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-2">
+            Showcasing my full-stack development projects
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Image Gallery for projects with images */}
               {project.images.length > 0 && (
                 <div className="relative mb-4 group">
-                  <div className="relative h-48 rounded-lg overflow-hidden bg-gray-100">
+                  <div className="relative h-40 sm:h-48 md:h-56 rounded-lg overflow-hidden bg-gray-100">
                     <img
                       src={project.images[imageIndices[index] || 0]}
                       alt={`${project.title} - Screenshot ${(imageIndices[index] || 0) + 1}`}
@@ -121,17 +128,17 @@ const Projects = () => {
                       <>
                         <button
                           onClick={() => prevImage(index, project.images.length)}
-                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                          className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
                         >
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                           </svg>
                         </button>
                         <button
                           onClick={() => nextImage(index, project.images.length)}
-                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                          className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
                         >
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         </button>
@@ -158,18 +165,18 @@ const Projects = () => {
                 </div>
               )}
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                 {project.title}
               </h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">{project.description}</p>
               
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+              <div className="mb-3 sm:mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+                      className="bg-blue-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
                     >
                       {tech}
                     </span>
@@ -177,22 +184,22 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <div className="mb-3 sm:mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Key Features:</h4>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm sm:text-base">
                   {project.features.map((feature, featureIndex) => (
                     <li key={featureIndex}>{feature}</li>
                   ))}
                 </ul>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 {project.link !== '#' && (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                    className="inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center text-sm sm:text-base"
                   >
                     View Project
                   </a>
@@ -200,7 +207,7 @@ const Projects = () => {
                 {project.images.length > 0 && (
                   <button
                     onClick={() => openModal(index)}
-                    className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+                    className="inline-block bg-indigo-600 text-white px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors text-center text-sm sm:text-base"
                   >
                     View Gallery
                   </button>
@@ -213,22 +220,22 @@ const Projects = () => {
 
       {/* Full Screen Image Modal */}
       {modalOpen && modalProjectIndex !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90" onClick={closeModal}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-2 sm:p-4" onClick={closeModal}>
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
+            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-gray-300 z-50"
           >
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          <div className="relative w-full max-w-5xl mx-4" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-5xl mx-2 sm:mx-4" onClick={(e) => e.stopPropagation()}>
             <div className="relative">
               <img
                 src={projects[modalProjectIndex].images[imageIndices[modalProjectIndex] || 0]}
                 alt={`${projects[modalProjectIndex].title} - Screenshot ${(imageIndices[modalProjectIndex] || 0) + 1}`}
-                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                className="w-full h-auto max-h-[70vh] sm:max-h-[80vh] object-contain rounded-lg"
               />
 
               {/* Navigation Arrows */}
@@ -236,17 +243,17 @@ const Projects = () => {
                 <>
                   <button
                     onClick={() => prevImage(modalProjectIndex, projects[modalProjectIndex].images.length)}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all"
+                    className="absolute left-1 sm:left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-2 sm:p-3 rounded-full transition-all"
                   >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
                   <button
                     onClick={() => nextImage(modalProjectIndex, projects[modalProjectIndex].images.length)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all"
+                    className="absolute right-1 sm:right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-2 sm:p-3 rounded-full transition-all"
                   >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
@@ -256,20 +263,20 @@ const Projects = () => {
 
             {/* Image Counter & Indicators */}
             {projects[modalProjectIndex].images.length > 1 && (
-              <div className="mt-4">
-                <div className="text-center text-white mb-3">
-                  <span className="text-lg font-semibold">
+              <div className="mt-3 sm:mt-4">
+                <div className="text-center text-white mb-2 sm:mb-3">
+                  <span className="text-base sm:text-lg font-semibold">
                     {(imageIndices[modalProjectIndex] || 0) + 1} / {projects[modalProjectIndex].images.length}
                   </span>
                 </div>
-                <div className="flex justify-center gap-2 flex-wrap">
+                <div className="flex justify-center gap-1.5 sm:gap-2 flex-wrap px-2">
                   {projects[modalProjectIndex].images.map((_, imgIndex) => (
                     <button
                       key={imgIndex}
                       onClick={() => setImageIndex(modalProjectIndex, imgIndex)}
-                      className={`w-3 h-3 rounded-full transition-all ${
+                      className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
                         imgIndex === (imageIndices[modalProjectIndex] || 0)
-                          ? 'bg-white w-10'
+                          ? 'bg-white w-6 sm:w-10'
                           : 'bg-gray-400 hover:bg-gray-300'
                       }`}
                     />
