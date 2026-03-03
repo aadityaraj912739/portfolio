@@ -32,7 +32,7 @@ const Projects = () => {
         'Real-time scoring system',
         'Fully responsive UI design',
       ],
-      link: 'https://college-project-roan.vercel.app/login',
+      link: 'https://online-subject-quiz.vercel.app/',
       images: [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11],
     },
     {
