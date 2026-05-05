@@ -95,15 +95,22 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-12 sm:py-16 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-indigo-50 to-purple-50 animate-gradient"></div>
+      
+      {/* Background Shapes */}
+      <div className="absolute top-10 right-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '3s'}}></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fadeInUp">
+            <span className="text-gradient-animate">
               Projects
             </span>
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-2">
+          <p className="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto px-2 font-medium animate-fadeInUp" style={{animationDelay: '0.2s'}}>
             Showcasing my full-stack development projects
           </p>
         </div>
@@ -111,16 +118,18 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="group bg-white p-5 sm:p-7 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
             >
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               {/* Image Gallery for projects with images */}
               {project.images.length > 0 && (
-                <div className="relative mb-4 group">
-                  <div className="relative h-40 sm:h-48 md:h-56 rounded-lg overflow-hidden bg-gray-100">
+                <div className="relative mb-5 group/img">
+                  <div className="relative h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 shadow-lg">
                     <img
                       src={project.images[imageIndices[index] || 0]}
                       alt={`${project.title} - Screenshot ${(imageIndices[index] || 0) + 1}`}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover/img:scale-105"
                     />
                     
                     {/* Navigation Arrows */}
@@ -128,18 +137,18 @@ const Projects = () => {
                       <>
                         <button
                           onClick={() => prevImage(index, project.images.length)}
-                          className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                          className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-2 sm:p-3 rounded-full transition-all duration-300 opacity-0 group-hover/img:opacity-100 shadow-lg hover:scale-110"
                         >
                           <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
                           </svg>
                         </button>
                         <button
                           onClick={() => nextImage(index, project.images.length)}
-                          className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                          className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-2 sm:p-3 rounded-full transition-all duration-300 opacity-0 group-hover/img:opacity-100 shadow-lg hover:scale-110"
                         >
                           <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                           </svg>
                         </button>
                       </>
@@ -148,15 +157,15 @@ const Projects = () => {
                   
                   {/* Image Indicators */}
                   {project.images.length > 1 && (
-                    <div className="flex justify-center gap-2 mt-2">
+                    <div className="flex justify-center gap-2.5 mt-3">
                       {project.images.map((_, imgIndex) => (
                         <button
                           key={imgIndex}
                           onClick={() => setImageIndex(index, imgIndex)}
-                          className={`w-2 h-2 rounded-full transition-all ${
+                          className={`rounded-full transition-all duration-300 ${
                             imgIndex === (imageIndices[index] || 0)
-                              ? 'bg-blue-600 w-8'
-                              : 'bg-gray-400 hover:bg-gray-600'
+                              ? 'bg-gradient-to-r from-blue-600 to-purple-600 w-10 h-2.5'
+                              : 'bg-gray-400 hover:bg-gray-600 w-2.5 h-2.5'
                           }`}
                         />
                       ))}
@@ -165,18 +174,18 @@ const Projects = () => {
                 </div>
               )}
               
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
                 {project.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">{project.description}</p>
+              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-5 leading-relaxed">{project.description}</p>
               
-              <div className="mb-3 sm:mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Technologies:</h4>
-                <div className="flex flex-wrap gap-2">
+              <div className="mb-4 sm:mb-5">
+                <h4 className="font-bold text-gray-900 mb-3 text-sm sm:text-base">Technologies:</h4>
+                <div className="flex flex-wrap gap-2.5">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-blue-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-default"
                     >
                       {tech}
                     </span>
@@ -184,11 +193,16 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="mb-3 sm:mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Key Features:</h4>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm sm:text-base">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="font-bold text-gray-900 mb-3 text-sm sm:text-base">Key Features:</h4>
+                <ul className="space-y-2 text-sm sm:text-base">
                   {project.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>{feature}</li>
+                    <li key={featureIndex} className="flex items-start gap-2.5 text-gray-700">
+                      <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -199,17 +213,23 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center text-sm sm:text-base"
+                    className="group/btn flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 sm:px-7 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 text-center text-sm sm:text-base transform hover:scale-105 hover:-translate-y-1"
                   >
-                    View Project
+                    <span>View Project</span>
+                    <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
                   </a>
                 )}
                 {project.images.length > 0 && (
                   <button
                     onClick={() => openModal(index)}
-                    className="inline-block bg-indigo-600 text-white px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors text-center text-sm sm:text-base"
+                    className="group/btn flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-5 sm:px-7 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 text-center text-sm sm:text-base transform hover:scale-105 hover:-translate-y-1"
                   >
-                    View Gallery
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span>View Gallery</span>
                   </button>
                 )}
               </div>
